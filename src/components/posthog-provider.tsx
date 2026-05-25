@@ -12,6 +12,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
       capture_pageview: 'history_change',
       capture_pageleave: true,
     })
+    posthog.register({ source: 'fashion-hero-shop' })
   }, [])
 
   return <PHProvider client={posthog}>{children}</PHProvider>
